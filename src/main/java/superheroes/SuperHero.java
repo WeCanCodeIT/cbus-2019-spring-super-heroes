@@ -7,7 +7,7 @@ public abstract class SuperHero {
 
 	public SuperHero(String name) {
 		this.name = name;
-		this.setStamina(10);
+		this.stamina = 10;
 	}
 
 	public String getName() {
@@ -18,12 +18,23 @@ public abstract class SuperHero {
 		return stamina;
 	}
 
-	public void walkOnWater() {
-		setStamina(getStamina() + 5);
-	}
+	// OfficePerson can't do this...
+//	public void walkOnWater() {
+//		increaseStaminaByFive();
+//	}
 
-	public void setStamina(int stamina) {
-		this.stamina = stamina;
+	// These are bad - DO NOT USE
+//	public void setStamina(int stamina) {
+//		this.stamina = stamina;
+//	}
+	
+	// Do this instead :)
+	public void increaseStaminaByFive() {
+		this.stamina += 5;
+	}
+	
+	public void decreaseStaminaByTwo() {
+		this.stamina -= 2;
 	}
 
 }

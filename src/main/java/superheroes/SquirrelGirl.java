@@ -1,6 +1,6 @@
 package superheroes;
 
-public class SquirrelGirl extends SuperHero {
+public class SquirrelGirl extends SuperHero implements CanWalkOnWater {
 	
 	private boolean isFlying;
 
@@ -19,7 +19,13 @@ public class SquirrelGirl extends SuperHero {
 	}
 
 	public void punch() {
-		setStamina(getStamina() - 2);
+//		setStamina(getStamina() - 2);
+		this.decreaseStaminaByTwo();
+	}
+
+	@Override
+	public void walkOnWater() {
+		this.increaseStaminaByFive();	
 	}
 
 }

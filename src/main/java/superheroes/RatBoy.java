@@ -1,6 +1,6 @@
 package superheroes;
 
-public class RatBoy extends SuperHero {
+public class RatBoy extends SuperHero implements CanWalkOnWater {
 	
 	private int selfLoathing;
 	
@@ -15,6 +15,11 @@ public class RatBoy extends SuperHero {
 
 	public void beShamed() {
 		selfLoathing += 5;
+	}
+
+	@Override
+	public void walkOnWater() {
+		this.increaseStaminaByFive();
 	}
 
 }

@@ -7,7 +7,9 @@ public class OfficePerson extends SuperHero {
 	}
 
 	public void drinkCoffee() {
-		setStamina(getStamina() + 5);
+		// How to use setters "properly"
+//		setStamina(getStamina() + 5);
+		this.increaseStaminaByFive();
 	}
 
 }
